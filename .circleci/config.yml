@@ -42,7 +42,7 @@ jobs:
       - run:
           name: login GCP
           command: |
-            echo $GCLOUD_SERVICE_KEY > /tmp/kuku.json 
+            echo $GOOGLE_SERVICE_KEY > /tmp/kuku.json 
             gcloud auth activate-service-account --key-file=/tmp/kuku.json 
             rm /tmp/kuku.json 
             gcloud  config set project $GOOGLE_PROJECT_ID	
