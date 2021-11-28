@@ -46,7 +46,6 @@ jobs:
             gcloud auth activate-service-account --key-file=/tmp/kuku.json 
             rm /tmp/kuku.json 
             gcloud  config set project $GOOGLE_PROJECT_ID	
-            #gcloud config set compute/region $GOOGLE_COMPUTER_REGION
-            #gcloud config set compute/zone $GOOGLE_COMPUTER_ZONE
+            
            
             gcloud beta run deploy  --image=$IMAGE_NAME	 --platform=managed --region=$GOOGLE_COMPUTE_REGION --allow-unauthenticated
